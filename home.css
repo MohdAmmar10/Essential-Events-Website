@@ -1,0 +1,56 @@
+#he{
+    margin-top: 130px;
+    align-content: center;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #f7ccf3 ;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    align-items: center;
+    text-align:center;
+    width:100%
+
+  }
+  .topnav img{
+      width: 200px;
+      height: 100px;
+      float: left;
+      padding: 0;
+      margin: 0;
+      }
+  
+  .topnav a {
+    float: left;
+    color: black;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    padding-top: 0; 
+  }
+  
+  .topnav a:hover {
+    background-color: black ;
+    color: #ddd;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: #ddd;
+  }
+  .footer {
+    position: relative ;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border:#a359d9;
+    border-top: 10px;
+ }
+ .ima{
+     background-image: url("home_th.png");
+     width: 1410px;
+     height: 500px;
+ }

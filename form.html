@@ -1,0 +1,109 @@
+<!doctype html>
+
+<head>
+    <title>
+        ESSENTIAL EVENTS FORM
+    </title>
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="form.css">
+
+    <div class="topnav">
+        <nav>
+            <h3 style="font-size:30px;">
+                <a href="Home.html">HOME</a>&emsp;
+                <a href="Services.html">SERVICES</a>&emsp;
+                <a href="Events.html">EVENTS</a>&emsp;
+                <a href="Blog.html">BLOGS</a>&emsp;
+                <a href="Cs.html">CONTACT US</a>
+            </h3>
+        </nav>
+    </div>
+    <header>
+        <h1 id="he" style="font-size:50px;" align=center>ESSENTIAL EVENTS</h1>
+    </header>
+    <div class="all">
+        <h2 style="font-size:30px;">
+            <center>SIGNUP FORM</center>
+        </h2>
+        <form action="home.html" method="post" onreset="resetfunc()">
+            <center>
+                <label for="ln">Full Name:</label>
+                <input type="text" class="sel" name="na" id="na" placeholder="Full Name" onblur="blurfunc(this)" autofocus required autocomplete="OFF">
+                <br><br>
+                <label for="lem">Email Id:&emsp;</label>
+                <input type="text" class="sel" name="em" id="em" placeholder="Email Address" onblur="blurfunc(this)" required autocomplete="OFF">
+                <br><br>
+                <label for="lpn">Phone No.:</label>
+                <input type="number" class="sel" name="pn" id="pn" placeholder="Phone No." onblur="blurfunc(this)" required autocomplete="OFF">
+                <br><br>
+                <label for="lun">Username:</label>
+                <input type="text" class="sel" name="un" id="un" placeholder="User Name" onblur="blurfunc(this)" required autocomplete="OFF">
+                <br><br>
+                <label for="lpw">Password:</label>
+                <input type="Password" class="sel" name="pw" id="pw" placeholder="Password" onchange="changefunc()" onblur="blurfunc(this)" required autocomplete="OFF">
+                <br><br>
+                <input type="reset" onreset="resetfunc" value="RESET">
+                <input type="button" onclick="validate(this.form)" value="SIGNUP" />
+            </center>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function blurfunc(x)
+        {
+            x.style.background="#02a317";
+        }
+        function resetfunc()
+        {
+            alert("You Reseted the form");
+        }
+        function changefunc()
+        {
+            alert("You changed the password");
+        }
+        function validate(form) {
+            var name = document.getElementById("na");
+            var email = document.getElementById("em");
+            var phoneno = document.getElementById("pn");
+            var username = document.getElementById("un");
+            var password = document.getElementById("pw");
+            var letters = /^[A-Za-z]+$/;
+            var rno = /^[0-9]+$/;
+            var eml = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var phno = /^\d{10}$/;
+            var x = document.querySelectorAll(".sel");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.border = "solid 2px green";
+            }
+            if (!name.value.match(letters)) {
+                alert("Please enter string in Name");
+                na.style.border = "solid 2px red";
+                return false;
+            } else if (!email.value.match(eml)) {
+                alert("Please enter valid Email Format");
+                em.style.border = "solid 2px red";
+                return false;
+            } else if (!phoneno.value.match(phno)) {
+                alert("Please enter 10 number in Phone no");
+                pn.style.border = "solid 2px red";
+                return false;
+            } else if (username.value.trim() == "") {
+                alert("No blank values Allowed!");
+                un.style.border = "solid 2px red";
+                return false;
+            } else if (password.value.trim() == "") {
+                alert("Blank Password!");
+                pw.style.border = "solid 2px red";
+                return false;
+            } else if (password.value.trim().length < 5) {
+                alert("Password too short");
+                pw.style.border = "solid 2px red";
+                return false;
+            } else {
+                window.open('Home.html')
+                return true;
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,68 @@
+<!doctype html>
+
+<head>
+    <title>
+        LOGIN FORM
+    </title>
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="login.css">
+
+    <div class="topnav">
+        <nav>
+            <h3 style="font-size:30px;">
+                <a href="Home.html">HOME</a>&emsp;
+                <a href="Services.html">SERVICES</a>&emsp;
+                <a href="Events.html">EVENTS</a>&emsp;
+                <a href="Blog.html">BLOGS</a>&emsp;
+                <a href="Cs.html">CONTACT US</a>
+            </h3>
+        </nav>
+    </div>
+    <header>
+        <h1 id="he" style="font-size:50px;" align=center>ESSENTIAL EVENTS</h1>
+    </header>
+    <div class="all">
+        <h2 style="font-size:30px;">
+            <center>LOGIN FORM</center>
+        </h2>
+        <form action="home.html" method="post">
+            <center>
+                <label for="lun">Username:</label>
+                <input type="text" class="sel" name="un" id="un" placeholder="User Name" required autofocus autocomplete="OFF">
+                <br><br>
+                <label for="lpw">Password:</label>
+                <input type="Password" class="sel" name="pw" id="pw" placeholder="Password" required autocomplete="OFF">
+                <br><br>
+                <input type="submit" onclick="validate(this.form) " id="Reg" value="LogIn"><br><br> New user?<a href="form.html"> Register</a>
+            </center>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function validate(form) {
+            var username = document.getElementById("un");
+            var password = document.getElementById("pw");
+            var x = document.querySelectorAll(".sel");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.border = "solid 2px green";
+            }
+            if (username.value.trim() == "") {
+                alert("No blank values Allowed!");
+                un.style.border = "solid 2px red";
+                return false;
+            } else if (password.value.trim() == "") {
+                alert("Blank Password!");
+                pw.style.border = "solid 2px red";
+                return false;
+            } else if (password.value.trim().length < 5) {
+                alert("Password too short");
+                pw.style.border = "solid 2px red";
+                return false;
+            } else {
+                window.open('Home.html')
+                return true;
+            }
+        }
+    </script>
+</body>

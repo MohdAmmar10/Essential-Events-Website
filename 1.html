@@ -1,0 +1,121 @@
+<!doctype html>
+<head>
+	<title>
+		ESSENTIAL EVENTS
+	</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+    var app = angular.module("myapp", []); 
+    app.controller("tableController", ['$scope', function ($scope) {
+    $scope.Content = [
+    { Type:"COLLABORATION EVENTS",Img:"s_cor.png",desc:"Corporate Events: The Event management team can assist you in developing a business case for your event and delivering an event that exceeds expectations."
+     ,names: [
+    { Name: "Conferences" },
+    { Name: "Trade Shows" },
+    { Name: "Networking Events" },
+    ]},
+    { Type: "ASSOCIATION EVENTS",Img:"s_ass.png",desc:"Association Events: Essential events has worked with numerous associations to implement strategic changes to their         events in order to address many of the issues associations deal with on a daily basis."
+    , names: [
+    { Name: "Product Launch" },
+    { Name: "VIP Events" },
+    ]},
+    { Type: "NON PROFIT EVENTS",Img:"s_np.png",desc:"Non-Profit Events: At Essential events, we have very strong ties to the community we work and live in and being         able to work with a not for profit organization is incredibly rewarding for us." 
+    ,names: [
+    { Name: "Weddings" },
+    { Name: "Birthdays" },
+    ]}
+    ]}]);
+    
+    </script>
+
+
+<body bgcolor=#ffe6ff>
+	<link rel="stylesheet" type="text/css" href="1.css">
+	<div class="topnav">
+		<nav>
+			<h3 style="font-size:30px;">
+					<a href="Home.html">HOME</a>&emsp;
+				<a href="Services.html">SERVICES</a>&emsp;
+				<a href="Events.html">EVENTS</a>&emsp;
+				<a href="Blog.html">BLOGS</a>&emsp;
+				<a href="Cs.html">CONTACT US</a>
+			</h3>
+		</nav>
+	</div>
+	<div class="ima">
+		
+	</div>
+<div class="s_inf">
+	<p>
+		<h4 style="font-size:25px;" align=center>Essential events has a diverse team, each
+            offering expert knowledge in their field. From strategy planning, budgeting,and comprehensive registration support to 
+            marketing and branding we bring the most current, innovative and professional market expertise.</h4>
+	</p>
+	<p>
+		<h5 style="font-size:20px;" align=center id="te1">"Essential Event is an incredibly talented, professional and industry leading event management company.
+            They helped us to raise the bar each year.
+            project management conferences. Our events would not have been what they were without them."
+        </h5>
+        <h6 style="font-size:17px;" align=center id="te2">
+            -Chairman,Flipkart.com
+        </h6>
+	</p>
+    </div>
+
+    <div class="container">
+    <div class="leftp">COLLABORATION EVENTS<img src="s_cor.png" id="lim"><div class="l_text">Corporate Events
+
+        The Event management team can assist you in 
+        developing a business case for your event and delivering an event that exceeds expectations.
+        
+        </div></div>
+    <div class="midp">ASSOCIATION EVENTS<img src="s_ass.png" id="mim"><div class="m_text">
+        Essential events has worked with numerous associations to implement strategic changes to their
+         events in order to address many of the issues associations deal with on a daily basis. </div>
+    </div>
+    <div class="rightp">NON PROFIT EVENTS<img src="s_np.png" id="rim"><div class="r_text">
+        At Essential events, we have very strong ties to the community we work and live in and being 
+        able to work with a not for profit organization is incredibly rewarding for us.</div>
+    </div>
+    </div>
+    <div ng-app="myapp" ng-controller="tableController">
+    <br>
+    <center>
+    <table border="2">
+    <tr >
+    <td ng-repeat="c in Content" width="33%">
+        <center>
+            <h3>{{c.Type}}</h3>
+            <img src="{{c.Img}}" id="lim"> <br><br>
+
+            <div>
+                {{c.desc}}
+            </div>
+            <ul ng-repeat="n in c.names">
+                <li>{{n.Name}}</li>
+            </ul>
+    </center></td>
+    </tr>
+    </table>
+    </center>
+    <br>
+    </div>
+
+
+<footer>
+    <br>
+    <br>
+    <hr height=50 color=#a359d9>
+    <center>
+    <p ><h4>ADDRESS:-</h4>
+    <h5>
+    Vidyanagar, Vidya Vihar East, Ghatkopar East, Mumbai, Maharashtra 400077
+    </h5></p>
+    <pt><h4>Contact Us:-</h4>
+    <h5>Email-essentialevents@events.com<br>
+    Phone No-+91 8879068559
+    </p></h5>
+    </center>
+    </p></footer>
+    </body>

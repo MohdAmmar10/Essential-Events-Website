@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='Services.xsl'?>
+<servicestypes>
+
+<service>
+<name>Conferences</name>
+<description>A conference is a meeting of people who "confer" about a topic. Conference types include: 
+Conference hall, room where conferences are held.Convention (meeting), meeting of a, usually large, 
+group of individuals and/or companies in a certain field.</description>
+<price>25 Lakhs</price>
+<people>600</people>
+</service>
+
+<service>
+<name>Product Launch</name>
+<description>A product launch is when a company decides to launch a new product in the market. 
+Product launch can be of an existing product which is already in the market or it can be a completely
+ new innovative product which the company has made. 
+Product launch involves various steps which involves understanding customer needs, product design, 
+testing of the product, marketing and advertising and ensuring that the product reaches out to all its 
+audience. A successful product launch provides a sales momentum for the company.</description>
+<price>45 Lakhs</price>
+<people>800</people>
+</service>
+
+<service>
+<name>Trade Shows</name>
+<description>A trade show is an event held to bring together members of a particular industry to display,
+ demonstrate, and discuss their latest products and services. Major trade shows usually take place in 
+ convention centers in larger cities and last several days. Local trade shows may be held at a local arena
+  or hotel and allow businesses in the area to connect with prospects.Since the purpose is to bring 
+  together members of the trade – or industry – most trade shows, which may also be referred to as trade 
+  fairs or expositions, only permit industry members to attend.</description>
+<price>30 Lakhs</price>
+<people>600</people>
+</service>
+
+<service>
+<name>Networking Events</name>
+<description>Networking comes in different forms. One of the most popular is a networking event. 
+It can be a conference wherein you can connect with the attendees and even the keynote speakers. 
+It can also be a professional association event that is organized by an industry organization.
+A professional networking event covers a specific market, allowing you to network with other people
+ within the industry. You can also hone your networking skills during a community event, which can be a
+  summer fair or a fundraising activity.</description>
+<price>20 Lakhs</price>
+<people>800</people>
+</service>
+
+<service>
+<name>VIP Events</name>
+<description>Event Management of VIP events which are an important marketing tool to increase and to 
+maintain the loyality of key customers. Every company and organization has someone they consider a VIP. 
+These people are often honored with VIP events. These people could be:
+The company’s top customer. In some cases, a top customer could represent up to 50 percent of a company’s 
+business. For a non profit organization, a VIP could be the top donor.</description>
+<price>40 Lakhs</price>
+<people>200</people>
+</service>
+
+<service>
+<name>Award Ceremonies</name>
+<description>An awards ceremony is a type of ceremony where awards are given out. The ceremony may be 
+arranged by a government organization, a society, a school, a trade association or even a company that 
+specializes in running awards ceremonies. Typically a master of ceremonies presents award winners, speaks 
+to the audience, entertains people, and generally keeps the ceremony moving.</description>
+<price>20 Lakhs</price>
+<people>400</people>
+</service>
+
+<service>
+<name>Weddings</name>
+<description>A wedding is a ceremony where two or more people are united in marriage. ... 
+Most wedding ceremonies involve an exchange of marriage vows by a couple, presentation of a gift 
+(offering, rings, symbolic item, flowers, money, dress), and a public proclamation of marriage by an 
+authority figure or celebrant.</description>
+<price>30 Lakhs</price>
+<people>500</people>
+</service>
+
+<service>
+<name>Birthdays</name>
+<description>A birthday is a day when a person celebrates the anniversary of his or her birth. Birthdays 
+are celebrated in numerous cultures, often with a gift, party, or rite of passage. The celebration of a 
+birthday usually is thought to mark how old a person is.</description>
+<price>10 Lakhs</price>
+<people>400</people>
+</service>
+
+</servicestypes>

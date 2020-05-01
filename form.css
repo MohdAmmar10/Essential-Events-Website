@@ -1,0 +1,91 @@
+html {
+    padding-top: 7%;
+    background-image: url(logbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #f7ccf3;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    align-items: center;
+    text-align: center;
+    width: 100%
+}
+
+.topnav img {
+    width: 200px;
+    height: 100px;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    padding-top: 0;
+}
+
+.topnav a:hover {
+    background-color: black;
+    color: #ddd;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: #ddd;
+}
+
+.all {
+    justify-content: center;
+    align-items: center;
+    background-color: #f7ccf3;
+    border: 2px solid rgb(0, 0, 0);
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 10px 1px 30px 1px;
+    width: 28%;
+    opacity: 50%;
+    transition: ease;
+    transition-delay: 0.2s;
+}
+
+.all:hover {
+    opacity: 100%;
+}
+
+input:focus {
+    background-color: rgb(148, 212, 241);
+}
+
+input[type=button] {
+    background-color: #f1aaea;
+    border: none;
+    padding: 8px 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: black;
+    color: #ddd;
+}
+input[type=reset] {
+    background-color: #f1aaea;
+    border: none;
+    padding: 8px 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type=reset]:hover {
+    background-color: black;
+    color: #ddd;
+}

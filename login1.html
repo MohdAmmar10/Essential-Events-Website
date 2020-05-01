@@ -1,0 +1,91 @@
+<!doctype html>
+
+<head>
+    <title>
+        FORM
+    </title>
+</head>
+
+<body>
+
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <div class="all">
+        <h1>
+            <center>SIGNUP FORM</center>
+        </h1>
+        <form action="submit.html" id="fullf" method="post">
+            <center>
+                <label for="ln">Full Name:</label>
+                <input type="text" class="sel" name="na" id="na" placeholder="Full Name" autofocus required autocomplete="OFF">
+                <br><br>
+                <label for="lrn">Roll No.:&emsp;</label>
+                <input type="text" class="sel" name="rn" id="rn" placeholder="Roll No." required autocomplete="OFF">
+                <br><br>
+                <label for="lem">Email Id:&emsp;</label>
+                <input type="text" class="sel" name="em" id="em" placeholder="Email Address" required autocomplete="OFF">
+                <br><br>
+                <label for="lpn">Phone No.:</label>
+                <input type="number" class="sel" name="pn" id="pn" placeholder="Phone No." required autocomplete="OFF">
+                <br><br>
+                <label for="lun">Username:</label>
+                <input type="text" class="sel" name="un" id="un" placeholder="User Name" required autocomplete="OFF">
+                <br><br>
+                <label for="lpw">Password:</label>
+                <input type="Password" class="sel" name="pw" id="pw" placeholder="Password" required autocomplete="OFF">
+                <br><br>
+                <input type="button" onclick="validate(this.form)" value="SIGNUP" />
+
+            </center>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function validate(form) {
+            var name = document.getElementById("na");
+            var rollno = document.getElementById("rn");
+            var email = document.getElementById("em");
+            var phoneno = document.getElementById("pn");
+            var username = document.getElementById("un");
+            var password = document.getElementById("pw");
+            var letters = /^[A-Za-z]+$/;
+            var rno = /^[0-9]+$/;
+            var eml = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var phno = /^\d{10}$/;
+            var x = document.querySelectorAll(".sel");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.border = "solid 2px green";
+            }
+            if (!name.value.match(letters)) {
+                alert("Please enter string in Name");
+                na.style.border = "solid 2px red";
+                return false;
+            } else if (!rollno.value.match(rno)) {
+                alert("Please enter number in Roll no");
+                rn.style.border = "solid 2px red";
+                return false;
+            } else if (!email.value.match(eml)) {
+                alert("Please enter valid Email Format");
+                em.style.border = "solid 2px red";
+                return false;
+            } else if (!phoneno.value.match(phno)) {
+                alert("Please enter 10 number in Phone no");
+                pn.style.border = "solid 2px red";
+                return false;
+            } else if (username.value.trim() == "") {
+                alert("No blank values Allowed!");
+                un.style.border = "solid 2px red";
+                return false;
+            } else if (password.value.trim() == "") {
+                alert("Blank Password!");
+                pw.style.border = "solid 2px red";
+                return false;
+            } else if (password.value.trim().length < 5) {
+                alert("Password too short");
+                pw.style.border = "solid 2px red";
+                return false;
+            } else {
+                window.open('Submit.html')
+                return true;
+            }
+        }
+    </script>
+</body>
